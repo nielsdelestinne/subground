@@ -14,6 +14,7 @@ module.exports = {
         ]
     },
     plugins: [new HtmlWebpackPlugin({
+        hash: true,
         title: "Subground - A Dungeon Crawler"
     })],
     resolve: {
