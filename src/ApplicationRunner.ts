@@ -31,8 +31,4 @@ export default class ApplicationRunner {
     }
 }
 
-/**
- * Start the Application
- */
-
 new ApplicationRunner().start();

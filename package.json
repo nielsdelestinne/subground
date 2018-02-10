@@ -9,7 +9,10 @@
     "typescript": "^2.7.1"
   },
   "scripts": {
-    "compile-for-dev": "tsc src/ApplicationRunner.ts --sourceMap  --outDir build",
-    "compile-for-prd": "tsc src/ApplicationRunner.ts --outFile prd/merged-index.js"
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "ts-loader": "^3.5.0",
+    "webpack": "^3.11.0"
   }
 }
