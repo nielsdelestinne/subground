@@ -13,6 +13,7 @@
     "dev": "webpack-dev-server --hot --inline"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.4.1",
     "html-webpack-plugin": "^2.30.1",
     "ts-loader": "^3.5.0",
     "webpack": "^3.11.0",

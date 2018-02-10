@@ -1,5 +1,6 @@
 const path = require("path");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: "./app/src/ApplicationRunner.ts",
@@ -13,12 +14,18 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        hash: true,
-        title: "Subground - A Dungeon Crawler"
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            hash: true,
+            title: "Subground - A Dungeon Crawler"
+        }),
+        new CopyWebpackPlugin([
+            { from: "./app/static/**/*.json", to: "./" },
+            { from: "./app/static/**/*.css", to: "./" }
+        ], {})
+    ],
     resolve: {
-        extensions: [ ".tsx", ".ts", ".js" ]
+        extensions: [".tsx", ".ts", ".js"]
     },
     output: {
         filename: "bundle.js",
