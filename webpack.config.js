@@ -20,8 +20,7 @@ module.exports = {
             title: "Subground - A Dungeon Crawler"
         }),
         new CopyWebpackPlugin([
-            { from: "./app/static/**/*.json", to: "./" },
-            { from: "./app/static/**/*.css", to: "./" }
+            { from: "./**/static/**/*.css", to: "./" }
         ], {})
     ],
     resolve: {
