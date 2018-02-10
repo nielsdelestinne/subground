@@ -1,6 +1,7 @@
 # Subground
 
 A Dungeon Crawler game
+Very much a work in progress :)
 
 ## Install
 1. Run `yarn install` or simply `yarn` from inside the project's root to install the required dependencies
