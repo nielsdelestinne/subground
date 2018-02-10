@@ -19,3 +19,20 @@ Very much a work in progress :)
 2. **Yarn** is used to manage the external dependencies
 3. **Webpack** is used to bundle the modules (into a single minified file)
     - In essence it handles the internal dependencies among all the files
+
+## Todo's
+- [x] Technical setup
+- [ ] Include `.css` files in the archive (see: html-webpack plugin, "templates")
+- [ ] Generate rooms out of `.json` or simply `.txt` files:
+    ```
+    xxxuxxx
+    xooooox
+    coooooc
+    xooooox
+    xxxxxxx
+    ```
+    - should result in a room being built that has a passage in the North, East and West
+- [ ] Player interaction
+- [ ] NPC's
+- [ ] Items
+- [ ] ...
