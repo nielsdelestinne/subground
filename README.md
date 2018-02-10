@@ -6,7 +6,7 @@ A Dungeon Crawler game
 1. Run `yarn install` or simply `yarn` from inside the project's root to install the required dependencies
 
 ## Run
-1. Run `npm run build` to compile the code and create an archive (bundled `bundle.js` file in the `dist` folder)
+1. Run `yarn run build` to compile the code and create an archive (bundled `bundle.js` file in the `dist` folder)
 2.  
 
 ## Technicalities
