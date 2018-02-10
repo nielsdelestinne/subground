@@ -9,10 +9,12 @@
     "typescript": "^2.7.1"
   },
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "dev": "webpack-dev-server --hot --inline"
   },
   "devDependencies": {
     "ts-loader": "^3.5.0",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
