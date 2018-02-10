@@ -5,8 +5,11 @@ A Dungeon Crawler game
 ## Install
 1. Run `yarn install` or simply `yarn` from inside the project's root to install the required dependencies
 
-## Run
-1. Run `yarn run build` to compile the code and create an archive (bundled `bundle.js` file in the `dist` folder) 
+## Run as Developer
+1. Run `yarn run dev` to start an hot-reload server on port `7331` (`localhost:7331`) 
+
+## Build for PRD
+1. Run `yarn run build` to compile the code and create an archive ready for PRD (bundled `bundle.js` file in the `dist` folder) 
 
 ## Technicalities
 1. **Typescript**
