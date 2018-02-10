@@ -1,6 +1,7 @@
 # Subground
 
-A Dungeon Crawler game
+A Dungeon Crawler game.
+
 Very much a work in progress :)
 
 ## Install
