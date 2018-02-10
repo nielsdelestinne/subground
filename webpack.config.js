@@ -1,4 +1,5 @@
 const path = require("path");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./app/src/ApplicationRunner.ts",
@@ -12,6 +13,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [new HtmlWebpackPlugin({
+        title: "Subground - A Dungeon Crawler"
+    })],
     resolve: {
         extensions: [ ".tsx", ".ts", ".js" ]
     },
@@ -21,7 +25,7 @@ module.exports = {
     },
     devServer: {
         contentBase: './dist',
-        publicPath: '/output',
-        port: 7331
+        port: 7331,
+        hot: true
     }
 };
