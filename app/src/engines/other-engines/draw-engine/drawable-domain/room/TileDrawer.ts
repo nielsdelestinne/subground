@@ -34,7 +34,7 @@ export default class TileDrawer implements Drawable {
     }
 
     private fillTile(canvasContext: any) {
-        canvasContext.fillStyle = TileDrawer.TILE_COLOR_FILL;
+        canvasContext.fillStyle = canvasContext.fillStyle = this.tileToDraw.tileType === "WALL" ? TileDrawer.TILE_COLOR_FILL  : "#4A4948";
         canvasContext.fillRect(this.calculateX(), this.calculateY(), this.calculateWidth(), this.calculateHeight());
     }
 
