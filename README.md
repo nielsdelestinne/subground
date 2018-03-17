@@ -2,6 +2,8 @@
 
 A Dungeon Crawler game.
 
+![Subground - WIP](Subgroud_wip.png)
+
 Very much a work in progress :)
 
 ## Install
@@ -22,6 +24,7 @@ Very much a work in progress :)
 
 ## Todo's
 - [x] Technical setup
+- [ ] Revert the changes in commit `9abb04337c40dea54c949ae92bd28bdc2541e5a8` and implement a proper solution that does not break the open/closed principle.
 - [ ] Include `.css` files in the archive (see: html-webpack plugin, "templates")
 - [ ] Provide an object of options to configure the draw-engine:
     ```
