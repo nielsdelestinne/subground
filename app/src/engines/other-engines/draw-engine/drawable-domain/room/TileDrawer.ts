@@ -9,9 +9,9 @@ export default class TileDrawer implements Drawable {
      * <Configurable>
      * ---------------
      */
-    private static readonly TILE_MARGIN: number = 10;
-    private static readonly TILE_COLOR_FILL: string = "#c25301";
-    private static readonly TILE_COLOR_STROKE: string = "#edf3e1";
+    private static readonly TILE_MARGIN: number = 5;
+    private static readonly TILE_COLOR_FILL: string = "#7f3f21";
+    private static readonly TILE_COLOR_STROKE: string = "#181818";
     private static readonly TILE_COLOR_STROKE_WIDTH: number = 5;
     /**
      * ---------------
@@ -33,15 +33,15 @@ export default class TileDrawer implements Drawable {
         this.strokeTile(canvasContext);
     }
 
+    private fillTile(canvasContext: any) {
+        canvasContext.fillStyle = TileDrawer.TILE_COLOR_FILL;
+        canvasContext.fillRect(this.calculateX(), this.calculateY(), this.calculateWidth(), this.calculateHeight());
+    }
+
     private strokeTile(canvasContext: any) {
         canvasContext.strokeStyle = TileDrawer.TILE_COLOR_STROKE;
         canvasContext.lineWidth = TileDrawer.TILE_COLOR_STROKE_WIDTH;
         canvasContext.strokeRect(this.calculateX(), this.calculateY(), this.calculateWidth(), this.calculateHeight());
-    }
-
-    private fillTile(canvasContext: any) {
-        canvasContext.fillStyle = TileDrawer.TILE_COLOR_FILL;
-        canvasContext.fillRect(this.calculateX(), this.calculateY(), this.calculateWidth(), this.calculateHeight());
     }
 
     private calculateX() {
