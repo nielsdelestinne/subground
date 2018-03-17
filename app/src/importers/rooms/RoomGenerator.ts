@@ -8,7 +8,10 @@ export default class RoomGenerator {
 
     public static generateRooms(rawRooms: RawRoom[]): Room[] {
         return rawRooms
-            .map(rawRoom => new Room(rawRoom.name, RoomGenerator.mapLayoutToTiles(rawRoom.layout)))
+            .map(rawRoom => new Room(rawRoom.name,
+                rawRoom.layout.length,
+                rawRoom.layout[0].length,
+                RoomGenerator.mapLayoutToTiles(rawRoom.layout)))
     }
 
     private static mapLayoutToTiles(layout: string[][]): Tile[] {
