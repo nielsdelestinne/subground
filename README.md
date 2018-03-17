@@ -23,11 +23,31 @@ Very much a work in progress :)
 ## Todo's
 - [x] Technical setup
 - [ ] Include `.css` files in the archive (see: html-webpack plugin, "templates")
-- [ ] Generate rooms out of `.json` or simply `.txt` files:
+- [ ] Provide an object of options to configure the draw-engine:
     ```
-    xxxuxxx
+    DrawEngine.initialize({
+    
+        // Sets the room width
+        roomWidthInPixels: 850,
+        
+        // Tile color
+        tileColor: '#fff',
+        
+        // Set game loop interval (seconds)
+        gameLoopInterval: 5,
+        
+        // Enable Debug
+        enableDebug: false,
+        
+        // ...
+    
+    });
+    ```
+- [x] Generate rooms out of a simplistic notation:
+    ```
+    xxxoxxx
     xooooox
-    coooooc
+    ooooooo
     xooooox
     xxxxxxx
     ```
