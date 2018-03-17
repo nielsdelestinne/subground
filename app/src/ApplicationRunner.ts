@@ -1,13 +1,13 @@
-import Engine, {default as GameEngine} from "./engine/GameEngine";
-import DrawEngine from "./engine/DrawEngine";
+import DrawEngine from "./engines/other-engines/draw-engine/DefaultDrawEngine";
+import GameEngine from "./engines/game-engine/DefaultGameEngine";
 
 class ApplicationRunner {
 
-    constructor(private engine: Engine) {
+    constructor(private gameEngine: GameEngine) {
     }
 
     public start(): void {
-        this.engine.start();
+        this.gameEngine.start();
     }
 
 }
@@ -18,7 +18,8 @@ class ApplicationRunner {
  * ------------------
  */
 new ApplicationRunner(
-    new GameEngine(
-        new DrawEngine()
+    new GameEngine([
+            new DrawEngine()
+        ]
     )
 ).start();

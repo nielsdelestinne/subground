@@ -1,5 +1,5 @@
-import CanvasSpec from "../CanvasSpec";
-import Engine from "./Engine";
+import CanvasSpec from "../../../CanvasSpec";
+import Engine from "../Engine";
 
 export default class DrawEngine implements Engine {
 
@@ -7,11 +7,11 @@ export default class DrawEngine implements Engine {
     private canvasContext: any;
 
     constructor() {
-        this.canvasElement = this.createCanvas();
+        this.canvasElement = DrawEngine.createCanvas();
         this.canvasContext = this.canvasElement.getContext("2d");
     }
 
-    public start(): void{
+    public execute(): void{
         this.drawBackground();
     }
 
@@ -21,7 +21,7 @@ export default class DrawEngine implements Engine {
         this.canvasContext.fill();
     }
 
-    private createCanvas(): HTMLElement{
+    private static createCanvas(): HTMLElement{
         const canvasElement = document.createElement("canvas");
         canvasElement.setAttribute("id", CanvasSpec.CANVAS_ID);
         canvasElement.setAttribute("width", `${CanvasSpec.CANVAS_WIDTH}`);

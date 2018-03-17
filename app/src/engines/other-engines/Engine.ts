@@ -1,5 +1,5 @@
 export default interface Engine {
 
-    start(): void;
+    execute(): void;
 
 }
