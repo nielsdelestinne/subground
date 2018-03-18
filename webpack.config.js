@@ -17,10 +17,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             hash: true,
-            title: "Subground - A Dungeon Crawler"
+            title: "Subground - A Dungeon Crawler",
+            template: 'index.html'
         }),
         new CopyWebpackPlugin([
-            { from: "./**/static/**/*.css", to: "./" }
+            { from: "./static/css/*.css", to: "./" }
         ], {})
     ],
     resolve: {

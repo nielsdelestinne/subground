@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
 </head>
 <body>
-$END$
+
+    <h1>Subground</h1>
+
+    <div class="layout">
+        <div id ="gui" class="child">
+            <!-- GUI INJECTED HERE -->
+        </div>
+        <div id ="cli" class="child">
+            <!-- CLI INJECTED HERE -->
+        </div>
+
 </body>
 </html>
