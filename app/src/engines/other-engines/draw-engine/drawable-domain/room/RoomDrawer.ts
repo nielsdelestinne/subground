@@ -17,15 +17,12 @@ export default class RoomDrawer implements Drawable {
      * ---------------
      */
 
-    public static readonly ROOM_WIDTH: number = CanvasSpec.CANVAS_WIDTH - (RoomDrawer.ROOM_MARGIN * 2);
-    public static readonly ROOM_HEIGHT: number = CanvasSpec.CANVAS_HEIGHT - (RoomDrawer.ROOM_MARGIN * 2);
-
     private static readonly ROOM_COLOR: string = "#363636";
 
 
     constructor(private roomToDraw: Room) {}
 
-    draw(canvasContext: any): void {
+    public draw(canvasContext: any): void {
         this.drawRoomOutline(canvasContext);
         this.drawTiles(canvasContext);
     }
@@ -35,8 +32,8 @@ export default class RoomDrawer implements Drawable {
         canvasContext.fillRect(
             RoomDrawer.ROOM_MARGIN,
             RoomDrawer.ROOM_MARGIN,
-            RoomDrawer.ROOM_WIDTH,
-            RoomDrawer.ROOM_HEIGHT)
+            RoomDrawer.getCalculatedRoomWidth(),
+            RoomDrawer.getCalculatedRoomHeight())
     }
 
     private drawTiles(canvasContext: any) {
@@ -45,11 +42,19 @@ export default class RoomDrawer implements Drawable {
                 .draw(canvasContext));
     }
 
+    private static getCalculatedRoomWidth() {
+        return CanvasSpec.width() - (RoomDrawer.ROOM_MARGIN * 2);
+    }
+
+    private static getCalculatedRoomHeight() {
+        return CanvasSpec.height() - (RoomDrawer.ROOM_MARGIN * 2);
+    }
+
     private getTileHeight(): number {
-        return (RoomDrawer.ROOM_HEIGHT) / this.roomToDraw.height;
+        return (RoomDrawer.getCalculatedRoomHeight()) / this.roomToDraw.height;
     }
 
     private getTileWidth(): number {
-        return (RoomDrawer.ROOM_WIDTH) / this.roomToDraw.width;
+        return (RoomDrawer.getCalculatedRoomHeight()) / this.roomToDraw.width;
     }
 }

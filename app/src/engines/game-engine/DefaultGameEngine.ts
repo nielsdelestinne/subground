@@ -1,5 +1,6 @@
 import {default as GameEngine} from "./GameEngine";
 import Engine from "../other-engines/Engine";
+import {Observable} from "rxjs/Rx";
 
 export default class DefaultGameEngine implements GameEngine {
 
@@ -11,6 +12,7 @@ export default class DefaultGameEngine implements GameEngine {
 
     public start(): void {
         this.startLoop();
+        this.listenToWindowResize();
     }
 
     public stop(): void {
@@ -29,5 +31,13 @@ export default class DefaultGameEngine implements GameEngine {
     private executeManagedEngines(): void {
         this.managedEngines
             .forEach(engine => engine.execute());
+    }
+
+    private listenToWindowResize() {
+        Observable.fromEvent(window, 'resize')
+            .debounceTime(1)
+            .subscribe((event) => {
+                this.executeManagedEngines();
+            });
     }
 }

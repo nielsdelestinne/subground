@@ -7,22 +7,19 @@ body {
 /* ------------ */
 
 .layout {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-* {
-    box-sizing: border-box;
+    width: 100%
 }
 
 #gui {
     background-color: #181818;
-    flex: 45%;
+    width: 40%;
+    float: left;
 }
 
 #cli {
     background-color: #000000;
-    flex: 53%;
+    width: 60%;
+    float: right;
 }
 
 .cli-body {

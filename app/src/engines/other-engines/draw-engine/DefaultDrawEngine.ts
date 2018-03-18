@@ -17,12 +17,13 @@ export default class DrawEngine implements Engine {
     }
 
     public execute(): void{
+        this.drawCanvas();
         this.drawBackground();
         this.drawDrawables();
     }
 
     private drawBackground(): void {
-        this.canvasContext.rect(0, 0, CanvasSpec.CANVAS_WIDTH, CanvasSpec.CANVAS_HEIGHT);
+        this.canvasContext.rect(0, 0, document.getElementById("gui").offsetWidth, document.getElementById("gui").offsetWidth);
         this.canvasContext.fillStyle = CanvasSpec.CANVAS_BACKGROUND_COLOR;
         this.canvasContext.fill();
     }
@@ -32,11 +33,17 @@ export default class DrawEngine implements Engine {
             .forEach(drawable => drawable.draw(this.canvasContext));
     }
 
+    private drawCanvas(): void {
+        const canvasElement = document.getElementsByTagName("canvas").item(0);
+        canvasElement.setAttribute("width", `${CanvasSpec.width()}`);
+        canvasElement.setAttribute("height", `${CanvasSpec.height()}`);
+    }
+
     private static createCanvas(): HTMLElement{
         const canvasElement = document.createElement("canvas");
         canvasElement.setAttribute("id", CanvasSpec.CANVAS_ID);
-        canvasElement.setAttribute("width", `${CanvasSpec.CANVAS_WIDTH}`);
-        canvasElement.setAttribute("height", `${CanvasSpec.CANVAS_HEIGHT}`);
+        canvasElement.setAttribute("width", `${CanvasSpec.width()}`);
+        canvasElement.setAttribute("height", `${CanvasSpec.height()}`);
         document.getElementById("gui").appendChild(canvasElement);
         return canvasElement;
     }
