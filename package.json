@@ -5,6 +5,7 @@
   "author": "Niels Delestinne",
   "license": "MIT",
   "dependencies": {
+    "rxjs": "^5.5.7",
     "typescript": "^2.7.1"
   },
   "scripts": {
