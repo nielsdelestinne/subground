@@ -10,7 +10,7 @@ export default class RoomDrawer implements Drawable {
      * <Configurable>
      * ---------------
      */
-    public static readonly ROOM_MARGIN: number = 100;
+    public static readonly ROOM_MARGIN: number = 50;
     /**
      * ---------------
      * </Configurable>

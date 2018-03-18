@@ -37,7 +37,7 @@ export default class DrawEngine implements Engine {
         canvasElement.setAttribute("id", CanvasSpec.CANVAS_ID);
         canvasElement.setAttribute("width", `${CanvasSpec.CANVAS_WIDTH}`);
         canvasElement.setAttribute("height", `${CanvasSpec.CANVAS_HEIGHT}`);
-        document.body.appendChild(canvasElement);
+        document.getElementById("gui").appendChild(canvasElement);
         return canvasElement;
     }
 

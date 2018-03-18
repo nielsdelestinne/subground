@@ -16,17 +16,18 @@ body {
 }
 
 #gui {
-    min-height: 100px;
-    text-align: center;
-    line-height: 100px;
-    background-color: #eed488;
-    flex: 40%;
+    background-color: #181818;
+    flex: 45%;
 }
 
 #cli {
-    min-height: 100px;
-    text-align: center;
-    line-height: 100px;
-    background-color: #bfbfbf;
-    flex: 60%;
+    background-color: #000000;
+    flex: 53%;
+}
+
+.cli-body {
+    padding: 50px;
+    color: white;
+    font-family: Consolas, monospace;
+    font-size: large;
 }
