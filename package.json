@@ -2,7 +2,6 @@
   "name": "subground",
   "version": "1.0.0",
   "description": "A dungeon crawler game",
-  "main": "src/runner.js",
   "author": "Niels Delestinne",
   "license": "MIT",
   "dependencies": {
