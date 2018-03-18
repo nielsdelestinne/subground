@@ -24,8 +24,18 @@ Very much a work in progress :)
 
 ## Todo's
 - [x] Technical setup
+- [x] Include `.css` files in the archive (see: html-webpack plugin, "templates")
+- [x] Generate rooms out of a simplistic notation:
+    ```
+    xxxoxxx
+    xooooox
+    ooooooo
+    xooooox
+    xxxxxxx
+    ```
+    - should result in a room being built that has a passage in the North, East and West
+- [ ] Regenerate GUI when dimensions change
 - [ ] Revert the changes in commit `9abb04337c40dea54c949ae92bd28bdc2541e5a8` and implement a proper solution that does not break the open/closed principle.
-- [ ] Include `.css` files in the archive (see: html-webpack plugin, "templates")
 - [ ] Provide an object of options to configure the draw-engine:
     ```
     DrawEngine.initialize({
@@ -46,15 +56,6 @@ Very much a work in progress :)
     
     });
     ```
-- [x] Generate rooms out of a simplistic notation:
-    ```
-    xxxoxxx
-    xooooox
-    ooooooo
-    xooooox
-    xxxxxxx
-    ```
-    - should result in a room being built that has a passage in the North, East and West
 - [ ] Player interaction
 - [ ] NPC's
 - [ ] Items
