@@ -2,7 +2,7 @@
 
 A Dungeon Crawler game.
 
-![Subground - WIP](Subgroud_wip.pngya)
+![Subground - WIP](Subgroud_wip.png)
 
 Very much a work in progress :)
 
